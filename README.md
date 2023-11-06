@@ -1,1 +1,1 @@
-# Lamp
+# Studies
