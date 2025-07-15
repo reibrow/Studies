@@ -1,0 +1,329 @@
+body {
+    margin: auto 0;
+    background-color: #252432;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 200px;
+    border: solid 2px black;
+    background-color: pink;
+}
+
+.animate-bounce {
+    color: white;
+    animation: bounce 2s infinite;
+}
+
+.animate-fadeIn {
+    color: white;
+    animation: fadeIn 2s ease-in infinite forwards;
+}
+
+.animate-fadeOut {
+    color: white;
+    animation: fadeOut 2s ease-in infinite forwards;
+}
+
+.animate-flip {
+    color: white;
+    animation: flip 1s ease-in-out infinite forwards;
+    transform-style: preserve-3d;
+}
+
+.animate-tada {
+    color: white;
+    animation: tada 1s ease-in-out infinite forwards;
+}
+
+.animate-heartBeat {
+    color: white;
+    animation: heartBeat 1s ease-in-out infinite forwards;
+}
+
+.animate-headShake {
+    color: white;
+    animation: headShake 1s ease-in-out infinite forwards;
+}
+
+.animate-zoomIn {
+    color: white;
+    animation: zoomIn 1s ease-in-out infinite forwards;
+}
+
+.animate-typeWriter {
+    color: white;
+    overflow: hidden;
+    border-right: 0.15em solid #000;
+    white-space: nowrap;
+    animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+.animate-fade-word span {
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    opacity: 0;
+    display: inline-block;
+    animation: fade 1s forwards infinite;
+}
+
+.animate-fade-word span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.animate-fade-word span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.animate-fade-word span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.animate-slide-in {
+    color: white;
+    transform: translateX(-100%);
+    opacity: 0;
+    animation: slideIn 1s forwards infinite;
+}
+
+.animate-glow {
+    animation: glow 1.5s ease-in-out infinite alternate;
+    color: #fff;
+}
+
+.animate-wobble {
+    color: white;
+    display: inline-block;
+    animation: wobble 1s infinite;
+  }
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes flip {
+    0% {
+        transform: rotateY(0deg) scale(1);
+    }
+
+    50% {
+        transform: rotateY(180deg) scale(1.2);
+    }
+
+    100% {
+        transform: rotateY(0deg) scale(1);
+    }
+}
+
+@keyframes tada {
+    0% {
+        transform: scale(1);
+    }
+
+    10%,
+    20% {
+        transform: scale(0.9) rotate(-3deg);
+    }
+
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: scale(1.1) rotate(3deg);
+    }
+
+    40%,
+    60%,
+    80% {
+        transform: scale(1.1) rotate(-3deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(0);
+    }
+}
+
+@keyframes heartBeat {
+    0% {
+        transform: scale(1);
+        transform-origin: center center;
+        animation-timing-function: ease-out;
+    }
+
+    10% {
+        transform: scale(1.1);
+        animation-timing-function: ease-in;
+    }
+
+    17% {
+        transform: scale(1);
+        animation-timing-function: ease-out;
+    }
+
+    33% {
+        transform: scale(1.1);
+        animation-timing-function: ease-in;
+    }
+
+    45% {
+        transform: scale(1);
+        animation-timing-function: ease-out;
+    }
+}
+
+@keyframes headShake {
+    0% {
+        transform: translateX(0);
+    }
+
+    6.5% {
+        transform: translateX(-6px) rotateY(-9deg);
+    }
+
+    18.5% {
+        transform: translateX(5px) rotateY(7deg);
+    }
+
+    31.5% {
+        transform: translateX(-3px) rotateY(-5deg);
+    }
+
+    43.5% {
+        transform: translateX(2px) rotateY(3deg);
+    }
+
+    50% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: black
+    }
+}
+
+@keyframes fade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #00f, 0 0 10px #00f;
+    }
+
+    to {
+        text-shadow: 0 0 20px #00f, 0 0 30px #00f;
+    }
+}
+
+@keyframes wobble {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(3deg);
+    }
+
+    50% {
+        transform: rotate(-3deg);
+    }
+
+    75% {
+        transform: rotate(2deg);
+    }
+}
